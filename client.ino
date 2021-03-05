@@ -42,10 +42,11 @@ void loop(){
 
   HTTPClient http; //Declare object of class HTTPClient
 
-  http.begin("http://192.168.1.88:8085/hello"); //Specify request destination
-  http.addHeader("Content-Type", "text/plain"); //Specify content-type header
+  http.begin("http://192.168.1.33/esp"); //Specify request destination
+  http.addHeader("Content-Type", "application/json"); //Specify content-type header
+  //text/plain
 
-  int httpCode = http.POST("Message from ESP8266"); //Send the request
+  int httpCode = http.POST("{\"text\":\"mag\ "}"); //Send the request
   String payload = http.getString();                //Get the response payload
 
   Serial.println(httpCode); //Print HTTP return code
