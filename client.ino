@@ -46,7 +46,7 @@ void loop(){
   http.addHeader("Content-Type", "application/json"); //Specify content-type header
   //text/plain
 
-  int httpCode = http.POST("{\"text\":\"mag\ "}"); //Send the request
+  int httpCode = http.POST("{\"temperature\":\"Temperature\"},{\"humidity\":\"Humidity\"}"); //Send the request
   String payload = http.getString();                //Get the response payload
 
   Serial.println(httpCode); //Print HTTP return code
