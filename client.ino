@@ -39,6 +39,10 @@ void loop(){
 
   Temperature = dht.readTemperature(); // Gets the values of the temperature
   Humidity = dht.readHumidity();       // Gets the values of the humidity
+  Serial.println(Temperature);
+  Serial.println(Humidity);
+  Serial.println(dht.readTemperature());
+  Serial.println(dht.readHumidity());
 
   HTTPClient http; //Declare object of class HTTPClient
 
