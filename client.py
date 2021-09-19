@@ -10,4 +10,5 @@ def newRequest():
 
 newRequest()
 if __file__=='__main___':
-	schedule.every(60).minutes.do(newRequest)
+	while True:
+		schedule.every(60).minutes.do(newRequest)
